@@ -301,8 +301,6 @@ export const updatePasswords = async (req, res) => {
   } catch (error) {
     console.error("Error updating passwords:", error);
     res.status(500).json({ error: "Error updating passwords." });
-  } finally {
-    mongoose.connection.close(); // Close the database connection
   }
 };
 // export const getAdmin = async (req, res) => {
